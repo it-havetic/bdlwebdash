@@ -5,6 +5,11 @@ import ProductUploadForm from "./components/ProductUploadForm";
 import Products from "./components/Products";
 import Analytics from "./components/Analytics";
 import Home from "./components/Home";
+import MockupZone from "./components/MockupZone";
+import RecentWork from "./components/RecentWork";
+import Greeting from "./components/Greeting";
+import Testimonium from "./components/Testimonium";
+import BlogSubmission from "./components/BlogSubmission";
 
 function App() {
   return (
@@ -15,6 +20,11 @@ function App() {
           <Route path="/upload" element={<ProductUploadForm />} />
           <Route path="/products" element={<Products />} />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/mockup-zone" element={<MockupZone />} />
+          <Route path="/recent-work" element={<RecentWork />} />
+          <Route path="/greeting" element={<Greeting />} />
+          <Route path="/testimonium" element={<Testimonium />} />
+          <Route path="/blog-submission" element={<BlogSubmission />} />
         </Routes>
       </Layout>
     </Router>
