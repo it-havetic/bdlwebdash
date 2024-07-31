@@ -36,7 +36,7 @@ const Products = () => {
   );
 
   return (
-    <div className="max-w-full mx-auto p-6 bg-white shadow-md rounded">
+    <div className="max-w-full h-full overflow-y-scroll mx-auto p-6  shadow-md rounded">
       <h1 className="text-2xl font-bold mb-4 text-gray-700">Products</h1>
       <ProductUploadForm
         onSubmit={editingProduct ? handleUpdateProduct : handleAddProduct}
@@ -68,20 +68,20 @@ const ProductTable = ({ products, onEdit, onDelete }) => {
       
       <table className="min-w-full bg-white mt-4 px-10">
         <thead>
-          <tr>
-            <th className="py-2 text-left">Item Code</th>
+          <tr className="">
+            <th className="py-2 pl-2 text-left">Item Code</th>
             <th className="py-2 text-left">Images</th>
             <th className="py-2 text-left">Price</th>
-            <th className="py-2 text-right">Actions</th>
+            <th className="py-2 pr-2 text-right">Actions</th>
           </tr>
         </thead>
         <tbody>
           {products.map((product, index) => (
             <tr key={index}>
               <td className="py-2 text-left">{product.productItemCode}</td>
-              <td className="py-2 text-left">{product.productImages}</td>
-              <td className="py-2 text-left">{product.productSellingPrice}</td>
-              <td className="py-2 text-right">
+              <td className="py-2  text-left">{product.productImages}</td>
+              <td className="py-2  text-left">{product.productSellingPrice}</td>
+              <td className="py-2  text-right">
                 <button
                   className="mr-2 px-4 py-2 bg-yellow-500 text-white rounded"
                   onClick={() => onEdit(index)}
